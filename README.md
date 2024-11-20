@@ -5,6 +5,7 @@
 ### 1. data_handler.py
 Purpose: Manages all interactions with the database (my_wardrobe.db).
 Functions:
+
 connect_db: Sets up the database and ensures the table my_wardrobe exists.
 add_item_to_db: Adds a new clothing item to the database.
 delete_item_from_db: Removes a clothing item from the database using its item_number.
