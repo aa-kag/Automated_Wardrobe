@@ -56,11 +56,11 @@ Purpose: Provides the main menu interface for interacting with the wardrobe mana
 
 Functions:
 
-display_wardrobe: Displays all clean clothing items in the wardrobe.
+'''display_wardrobe()''': Displays all clean clothing items in the wardrobe.
 
-remove_item: Allows the user to remove an item by its ID.
+remove_item(): Allows the user to remove an item by its ID.
 
-main: The entry point for the program, presenting a menu to:
+main(): The entry point for the program, presenting a menu to:
 
 Add items to the wardrobe.
 
