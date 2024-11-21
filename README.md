@@ -8,7 +8,7 @@ This respository contains a 4 main files and a sample database with some clothin
 
 1. Download the Wardrobe folder from the GitHub Repository.
 2. In your terminal open up the folder using the ```cd``` command. Example: cd /Users/user1/Desktop/Wardrobe
-3. Run command ```python main.py```. This will prompt the program to open with the main menu. In this github is a preloaded database with some pieces of clothing already stored, you can keep them in the database or remove and add your own clothing!
+3. Run command ```python main.py```. This will prompt the program to open with the main menu. In this github is a preloaded database with some clothing items already stored, you can keep them in the database or remove and add your own clothing!
 
 ## Files included
 
