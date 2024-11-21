@@ -1,4 +1,4 @@
-# Automated_Wardrobe
+# Automated Wardrobe
 
 ## Description
 
