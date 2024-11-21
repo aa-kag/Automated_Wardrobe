@@ -1,5 +1,9 @@
 # Automated_Wardrobe
 
+## Description
+
+This respository contains a 4 main files and a sample database with some clothing items already stored within it. The files work together to create a database to store the user's clothing items and then create an interface where the user can get daily outfit recommendations and laundry reminders. The hope is that this project lowers the daily decision fatigue of the user by simplfying outfit selection. 
+
 ## How To Run The Program
 
 1. First download the Wardrobe folder from the GitHub Repository.
