@@ -2,6 +2,9 @@ from data_handler import load_wardrobe_from_db, connect_db
 from random import sample
 from PyQt5.QtWidgets import QMessageBox
 
+# create forbidden pairings - categorize between different styles (formal and atheltic shouldnt go together)
+# also create something so that when wardrobe is being viewed it is sorted by clothing type not just the order in which things were added
+
 def update_wear_count(item):
     conn = connect_db()
     cursor = conn.cursor()
@@ -34,7 +37,7 @@ def select_outfit(temperature, raining):
         elif temp_category in clothing.temperature_suitability:
             selected_outfits.append(clothing)
     if raining:
-        selected_outfits = [item for item in selected_outfits if item.precipitation_suitability]
+        selected_outfits = [item for item in selected_outfits if item.precipitation_suitability == True]
 
     # Separate items categorically
     tops = [item for item in selected_outfits if item.category == 'top' and item.wear_count < item.wear_limit]
@@ -86,17 +89,8 @@ def select_outfit(temperature, raining):
         return outfit
 
 def notify_laundry():
-    msg = QMessageBox()
-    msg.setIcon(QMessageBox.Information)
-    msg.setWindowTitle("Laundry Alert")
-    msg.setText("You only have two clean outfits left. Time to do laundry!")
-    msg.exec_()
-
-def display_outfit(outfit):
-    if outfit is None:
-        return
-    print("\n Today's Outfit:")
-    print(f"Top: {outfit['top']}")
-    print(f"Bottom: {outfit['bottom']}")
-    if "outerwear" in outfit:
-        print(f"Outerwear: {outfit['outerwear']}")
+    alert = QMessageBox()
+    alert.setIcon(QMessageBox.Information)
+    alert.setWindowTitle("Laundry Alert")
+    alert.setText("You only have two clean outfits left or do not have appropriate clothing for the weather. Time to do laundry!")
+    alert.exec_()

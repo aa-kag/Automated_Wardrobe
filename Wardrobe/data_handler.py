@@ -1,4 +1,5 @@
 import sqlite3
+from PyQt5.QtWidgets import QMessageBox
 
 class ClothingItem:
     def __init__(self, clothing_name, category, color, style, material, temperature_suitability, precipitation_suitability, wear_limit, wear_count=0,item_number=None):
@@ -81,4 +82,8 @@ def do_laundry():
     cursor.execute("UPDATE my_wardrobe SET wear_count = 0")
     conn.commit()
     conn.close()
-    print("All clothing items are now clean!")
+    alert = QMessageBox()
+    alert.setIcon(QMessageBox.Information)
+    alert.setWindowTitle("Laundry Alert")
+    alert.setText("All clothing iterms are now clean!")
+    alert.exec_()
