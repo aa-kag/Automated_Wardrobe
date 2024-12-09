@@ -4,7 +4,9 @@ from PyQt5.QtWidgets import QMessageBox
 
 # create forbidden pairings - categorize between different styles (formal and atheltic shouldnt go together)
 # also create something so that when wardrobe is being viewed it is sorted by clothing type not just the order in which things were added
-# also need to create 
+# also need to add pictures of the interface for the readme - reference peer review for more things to edit.
+# need to fix things such as only having rain related clothing if it is raining
+# also maybe prompt something alerting that you need x amount of clothes in otherwise will get laundry prompt everytime
 
 def update_wear_count(item):
     conn = connect_db()
