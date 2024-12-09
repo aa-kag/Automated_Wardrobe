@@ -4,6 +4,7 @@ from PyQt5.QtWidgets import QMessageBox
 
 # create forbidden pairings - categorize between different styles (formal and atheltic shouldnt go together)
 # also create something so that when wardrobe is being viewed it is sorted by clothing type not just the order in which things were added
+# also need to create 
 
 def update_wear_count(item):
     conn = connect_db()
