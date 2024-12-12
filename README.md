@@ -31,7 +31,7 @@ Functions:
 
 ```do_laundry()```: Resets the wear_count of all clothing items to 0.
 
-'''ClothingItem''': Class which initializes all the database columns as objects which are referenced throughout.
+```ClothingItem```: Class which initializes all the database columns as objects which are referenced throughout.
 
 ### 2. functions.py
 Purpose: Houses all of the classes which contain the features of every widget and button in the interface. This file sets up the design for each window that opens when a button is pushed on the main interface. Each class is related to one of the main buttons of the interface.
