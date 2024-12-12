@@ -42,17 +42,19 @@ def select_outfit(temperature: int, raining: str):
 
     # if raining is selected by user then program goes through all outerwear which is rain friendly and
     #  breaks down the lists by what temperatures are selected - decided to lump warm and hot temperatures together to keep it simple as most outerwears are for cold or warm and hot 
-    if raining:
+    if raining =='yes':
         rain_outerwear = [item for item in outerwears if item.precipitation_suitability]
         if temperature >= 55: # warm and hot weathers
             outerwear = sample(rain_outerwear, 1)[0] if rain_outerwear else None
-            # outerwear = filtered_outer
         else: # cold weather filters
             cold_rain_outerwear = [item for item in rain_outerwear if 'cold' in item.temperature_suitability]
             outerwear = sample(cold_rain_outerwear,1)[0] if rain_outerwear else None
     else: # no rain just the regular selections
-        temp_suitable_outerwear = [item for item in outerwears if temp_category in item.temperature_suitability]
-        outerwear = sample(temp_suitable_outerwear,1)[0] if outerwears else None
+        if temperature> 75: # if greater than 75 degrees no outerwear would be needed as it is too hot
+            outerwear = None
+        else:
+            temp_suitable_outerwear = [item for item in outerwears if temp_category in item.temperature_suitability]
+            outerwear = sample(temp_suitable_outerwear,1)[0] if outerwears else None
      # warm or hot tops when outerwear is suitable in cold
     if outerwear and 'cold' in outerwear.temperature_suitability:
         tops = [item for item in wardrobe if item.category == 'top']
