@@ -42,9 +42,7 @@ Classes:
 
 ```addItem()``` function within the ```AddItem()``` class pulls the user inputs from each pyqt5 widget and organizes the clothing item details (e.g., name, category, color, etc.)to create a ClothingItem object.
 
-* ```RemoveItem(QDialog)```: This class focuses on removing items using QDialog. This class initializes the framework which contains a place to enter the item id you want to remove or to remove all the items in the wardrobe.
-
-```removeItem()``` function within the class pulls out the user inputted id number and then calls on the ```delete_item_from_db``` function from ```data_handler``` file. 
+* ```RemoveItem(QDialog)```: This class focuses on removing items using QDialog. This class initializes the framework which contains a place to enter the item id you want to remove or to remove all the items in the wardrobe.```removeItem()``` function within the class pulls out the user inputted id number and then calls on the ```delete_item_from_db``` function from ```data_handler``` file. 
 ```removeAll()``` This function  creates the logic for if the user wants to clear the entire wardrobe by iterating through the wardrobe using ```load_wardrobe_from_db()``` and then iterates through all the item_numbers and deletes them from the wardrobe.
 
 *  ```View(QDialog)```: This class creates the framework for viewing the wardrobe and hamper tables within the QDialog and then pulls from the the wardrobe 2 times. Once it pulls using the ```viewCloset``` function which pulls all clean clothes and then ```viewHamper``` function which pulls all dirty clothes. These tables are displayed on top of each other with wardrobe above the hamper.
