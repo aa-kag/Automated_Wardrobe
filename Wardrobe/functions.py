@@ -89,8 +89,11 @@ class AddItem(QDialog):
         if self.tempWarm.isChecked():
             temperature_suitability.append('warm')
         
-        precipitation = self.rain.currentItem().text() # grabs current selection adn then pulls that text as a string with .text()
-        precipitation_suitability = precipitation.lower().strip() == 'yes' # checks if the input is 'yes' so that that it assigns True or False
+        if self.rain.currentItem() is not None:
+            precipitation = self.rain.currentItem().text().lower().strip() # grabs current selection amd then pulls that text as a string with .text()
+        else:
+            precipitation = 'None' # if nothing has been selected - meaning it is not an outerwear being added then this will make it none so false is assigned to the suitability
+        precipitation_suitability = precipitation == 'yes' # checks if the input is 'yes' so that that it assigns True or False
         
         wear_limit = int(self.wearLimit.text().strip())
 
