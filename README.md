@@ -2,7 +2,7 @@
 
 ## Project Goals
 
-The goal of this project is to streamline the user's daily outfit decision-making by sorting their clothing items into categories which will then be considered when suggesting outfits. The hope is to simplify the daily hassle of deciding what to wear every morning before we step outside. TThe hope is that this project lowers the daily decision fatigue of the user by simplfying outfit selection. 
+The goal of this project is to streamline the user's daily outfit decision-making by sorting their clothing items into categories which will then be considered when suggesting outfits. The hope is to simplify the daily hassle of deciding what to wear every morning before we step outside. The hope is that this project lowers the daily decision fatigue of the user by simplfying outfit selection. 
 
 ## Project Overview and Description
 
@@ -39,9 +39,10 @@ Purpose: Houses all of the classes which contain the features of every widget an
 Classes:
 
 ```AddItem()```: Initializes the Qdialog framework from which prompts from the user for details about the clothing item being added are added to the QVBoxlayout.
-  '''addItem''' function pulls the user inputs from each pyqt5 widget and organizes the clothing item details (e.g., name, category, color, etc.)to create a ClothingItem object.
 
-```RemoveItem()```: 
+```addItem()``` function within the ```AddItem()``` class pulls the user inputs from each pyqt5 widget and organizes the clothing item details (e.g., name, category, color, etc.)to create a ClothingItem object.
+
+```RemoveItem()```: This class
 
 ### 3. outfit_selector.py
 Purpose: Handles outfit suggestions and wear tracking.
