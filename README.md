@@ -1,8 +1,12 @@
 # Automated Wardrobe
 
-## Description
+## Project Goals
 
-This respository contains a 4 main files and a sample database with some clothing items already stored within it. The files work together to create a database to store the user's clothing items and then create an interface where the user can get daily outfit recommendations and laundry reminders. The hope is that this project lowers the daily decision fatigue of the user by simplfying outfit selection. 
+The goal of this project is to streamline the user's daily outfit decision-making by sorting their clothing items into categories which will then be considered when suggesting outfits. The hope is to simplify the daily hassle of deciding what to wear every morning before we step outside. TThe hope is that this project lowers the daily decision fatigue of the user by simplfying outfit selection. 
+
+## Project Overview and Description
+
+This respository contains a 4 main files and a sample database with some clothing items already stored within it. The files work together to create a database to store the user's clothing items and then create an interface where the user can get daily outfit recommendations and laundry reminders. The user will also be able to remove items and add new items as they please. The program also allows for the user to view their entire wardrobe and their dirty clothes as they populate in the hamper table.
 
 ## How To Run The Program
 
@@ -13,7 +17,7 @@ This respository contains a 4 main files and a sample database with some clothin
 ## Files included
 
 ### 1. data_handler.py
-Purpose: Manages all interactions with the database (my_wardrobe.db).
+Purpose: Manages all interactions and changes with the database (my_wardrobe.db).
 
 Functions:
 
@@ -27,14 +31,17 @@ Functions:
 
 ```do_laundry()```: Resets the wear_count of all clothing items to 0.
 
-### 2. wardrobe_input.py
-Purpose: Handles user input for adding new clothing items.
+'''ClothingItem''': Class which initializes all the database columns as objects which are referenced throughout.
 
-Functions:
+### 2. functions.py
+Purpose: Houses all of the classes which contain the features of every widget and button in the interface. This file sets up the design for each window that opens when a button is pushed on the main interface. Each class is related to one of the main buttons of the interface.
 
-```get_clothing_input()```: Prompts the user for details about a clothing item (e.g., name, category, color, etc.) and creates a ClothingItem object.
+Classes:
 
-```add_to_wardrobe()```: Guides the user through adding multiple items to the wardrobe and saves them to the database using data_handler.
+```AddItem()```: Initializes the Qdialog framework from which prompts from the user for details about the clothing item being added are added to the QVBoxlayout.
+  '''addItem''' function pulls the user inputs from each pyqt5 widget and organizes the clothing item details (e.g., name, category, color, etc.)to create a ClothingItem object.
+
+```RemoveItem()```: 
 
 ### 3. outfit_selector.py
 Purpose: Handles outfit suggestions and wear tracking.
