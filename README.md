@@ -74,10 +74,13 @@ Purpose: Provides the main menu interface by calling from the variety of differe
 ### Program Snapshots
 #### Main Menu
 <img width="490" alt="MainMenu" src="https://github.com/user-attachments/assets/812ce45f-3e32-4dba-9290-cbaeb5b40f42" />
+
 #### Adding Item Interface
 <img width="693" alt="AddItem" src="https://github.com/user-attachments/assets/86ca1860-8c80-402d-a641-c1dedaaa4698" />
+
 #### Recommendation Screen
 <img width="610" alt="recommendation" src="https://github.com/user-attachments/assets/9c0110c3-8222-489d-8076-a8115b62ad1b" />
+
 #### Viewing Wardrobe and Hamper
 <img width="1187" alt="wardrobeandhamper" src="https://github.com/user-attachments/assets/6ca35c9e-c426-4cd0-9ffe-16e6ae53fc73" />
 
