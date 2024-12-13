@@ -22,18 +22,20 @@ class AddItem(QDialog):
         category_label =QLabel('Select item category')
         layout.addWidget(category_label)
         self.category_input = QListWidget()
-        self.category_input.addItems(['Top','Bottom','Outerwear'])
+        self.category_input.addItems(['Top','Bottom','Outerwear']) # options for categories 
         layout.addWidget(self.category_input)
 
         color_label = QLabel('Color')
         layout.addWidget(color_label)
         self.color = QComboBox()
+        #color options based on banned combinations from outfit selector file
         self.color.addItems(['Red','Brown','Blue','Purple','Orange','Pink','Yellow','Black','Beige','Green','Grey','White'])
         layout.addWidget(self.color)
 
         style_label =QLabel('Select style (click as many as applicable)')
         layout.addWidget(style_label)
         self.style_ = QListWidget()
+        # similar to above, styles based on pre determined from outfit selector file
         self.style_.addItems(['Athletic','Formal','Casual','Business Casual'])
         self.style_.setSelectionMode(QListWidget.MultiSelection)
         layout.addWidget(self.style_)
@@ -54,7 +56,7 @@ class AddItem(QDialog):
         rain_label = QLabel('Is this item suitable for rainy weather? Please leave blank if item is not an outerwear!')
         layout.addWidget(rain_label)
         self.rain = QListWidget()
-        self.rain.addItems(['yes','no'])
+        self.rain.addItems(['yes','no']) # created buttons rather than user typing
         self.rain.setFixedHeight(40)
         layout.addWidget(self.rain)
 
@@ -129,16 +131,16 @@ class RemoveItem(QDialog):
     def removeItem(self):
         '''pulls integer from user input and then uses delete_item_from_db function to search the db for the item_id and removes it from the db'''
         remove = self.item_ID.text().strip()
-        if remove:
-            if remove.isdigit():
+        if remove: # checks if something has been entered
+            if remove.isdigit(): # if it is a number
                 remove = int(remove)
                 delete_item_from_db(remove)
                 QMessageBox.information(self, "Attention",'Item Removed')
                 self.close()
-            else:
+            else: # to check if user added accurately
                 QMessageBox.information(self, "Attention",'Invalid Input')
                 self.close()
-        else:
+        else: # if nothing was submitted:
             QMessageBox.information(self, "Attention",'Please enter a number in the box')
 
     def removeAll(self):

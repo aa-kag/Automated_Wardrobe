@@ -38,7 +38,8 @@ class Window(QMainWindow):
         self.exit_button = QPushButton('Exit')
         self.exit_button.clicked.connect(self.close)
         layout.addWidget(self.exit_button)
-# these functions are linked to the classes
+# these functions are linked to the classes and execute the interface corresponding to the classes as the button is clicked
+# each of these functions are connected to a button from above on the main window
     def add_item(self):
         input = AddItem()
         input.exec()
