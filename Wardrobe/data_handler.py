@@ -2,7 +2,7 @@ import sqlite3
 from PyQt5.QtWidgets import QMessageBox
 
 class ClothingItem:
-    '''ClothingItem class is used to assign/model each of the items and attributes associated with the wardrobe items. Initializes all database columns so that
+    '''ClothingItem class is used to create an object for each of the items and assign attributes associated with the wardrobe items. Initializes all attributes from db columns so that
     they can be referenced 
     '''
     def __init__(self, clothing_name, category, color, style, material, temperature_suitability, precipitation_suitability, wear_limit, wear_count=0,item_number=None):
