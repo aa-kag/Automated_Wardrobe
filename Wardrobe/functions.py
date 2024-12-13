@@ -256,13 +256,19 @@ class GetOutfit(QDialog):
         self.setGeometry(100, 100, 500, 500)
         self.layout = QVBoxLayout(self)
         # setting inputs for user
+        is_temp = QLabel('What is the temperature?')
+        self.layout.addWidget(is_temp)
         self.temp = QLineEdit()
         self.temp.setPlaceholderText('Enter temperature (°F): ')
         self.layout.addWidget(self.temp)
 
-        self.rain = QLineEdit()
-        self.rain.setPlaceholderText('Is it raining? (yes/no):')
-        self.layout.addWidget(self.rain)
+        is_raining = QLabel('Is it raining?')
+        self.layout.addWidget(is_raining)
+        self.raining = QListWidget()
+        self.raining.addItems(['yes','no'])
+        self.raining.setFixedHeight(40)
+        self.layout.addWidget(self.raining)
+
         # triggering the select_outfits function when button is pressed
         self.suggestion = QPushButton('Get an outfit!')
         self.suggestion.clicked.connect(self.select_outfits)
@@ -284,7 +290,7 @@ class GetOutfit(QDialog):
         '''pulls user input for temperature and precipitation and then runs them through the select_outfit function from the outfit_selector file. 
         This then results in the Qlabel in the init function to be populated based on parameters set by the user inputs'''
         temp = int(self.temp.text().strip())
-        rain = self.rain.text().strip().lower()
+        rain = self.raining.currentItem().text().strip().lower()
         outfit = select_outfit(temp,rain) # int and str
         # sets the qlabels for the top bottom and outerwar
         if outfit:
