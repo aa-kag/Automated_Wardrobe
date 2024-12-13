@@ -95,3 +95,11 @@ def do_laundry():
     alert.setText("Laundry Alert")
     alert.setInformativeText("All clothing iterms are now clean!")
     alert.exec_()
+
+def update_wear_count(item): # updates wear count referenced in the outfit selector file as items are selected 
+    '''updates item wear count to the database for items in wardrobe'''
+    conn = connect_db()
+    cursor = conn.cursor()
+    cursor.execute("UPDATE my_wardrobe SET wear_count = ? WHERE item_number = ?", (item.wear_count, item.item_number))
+    conn.commit()
+    conn.close()

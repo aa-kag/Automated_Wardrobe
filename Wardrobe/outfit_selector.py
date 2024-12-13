@@ -1,15 +1,6 @@
-from data_handler import load_wardrobe_from_db, connect_db
+from data_handler import load_wardrobe_from_db, update_wear_count
 from random import sample
 from PyQt5.QtWidgets import QMessageBox
-
-# also need to add pictures of the interface for the readme - reference peer review for more things to edit.
-def update_wear_count(item):
-    '''updates item wear count to the database for items in wardrobe'''
-    conn = connect_db()
-    cursor = conn.cursor()
-    cursor.execute("UPDATE my_wardrobe SET wear_count = ? WHERE item_number = ?", (item.wear_count, item.item_number))
-    conn.commit()
-    conn.close()
 
 def select_outfit(temperature: int, raining: str):
     '''main function for outfit selection logic. Filters tops, bottoms, outerwears between temperature,
