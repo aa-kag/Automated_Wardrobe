@@ -13,10 +13,15 @@ This respository contains 4 main files and a sample database with some clothing 
 1. Clone the GitHub Repository.
 2. In your terminal open up the folder containing the main.py file using the ```cd``` command. Example: cd /Users/user1/Desktop/Automated_Wardrobe where main.py is in the Automated_Wardrobe folder.
 3. Run command ```python main.py```. This will prompt the program to open with the main menu. In this github is a preloaded database with some clothing items already stored, you can keep them in the database or remove and add your own clothing!
+## Folders included
+
+There are two additional folders within this repository.  
+* ```src``` which contains the files which build the program. The user will only need to run the main.py file hence it being stored in the main directory.
+* ```images```` contains the .png images which the functions.py file uses to include images on the interface depending on the weather input selected by the user.
 
 ## Files included
 
-### 1. data_handler.py
+### 1. src/data_handler.py
 Purpose: Manages all interactions and changes with the database (my_wardrobe.db).
 
 Functions:
@@ -33,7 +38,7 @@ Functions:
 
 ```ClothingItem```: Class which initializes all the database columns as objects which are referenced throughout.
 
-### 2. functions.py
+### 2. src/functions.py
 Purpose: Houses all of the classes which contain the features of every widget and button in the interface. This file sets up the design for each window that opens when a button is pushed on the main interface. Each class is related to one of the main buttons of the interface.
 
 Classes:
@@ -49,7 +54,7 @@ Classes:
 
 
 
-### 3. outfit_selector.py
+### 3. src/outfit_selector.py
 Purpose: Handles outfit suggestions and wear tracking.
 
 Functions:
