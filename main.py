@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton
 import sys
-from data_handler import *
-from functions import *
+from src.data_handler import *
+from src.functions import *
 
 class Window(QMainWindow):
     '''main window where the opening interface which contains the buttons which are connected to the functions files where all the button functions are outlined. This 

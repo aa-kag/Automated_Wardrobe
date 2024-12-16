@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QVBoxLayout, QPushButton, QLabel, QDialog, QTableWidget, QTableWidgetItem, QMessageBox, QLineEdit, QComboBox, QListWidget, QHBoxLayout, QCheckBox
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QPixmap
-from data_handler import load_wardrobe_from_db, delete_item_from_db, add_item_to_db, ClothingItem
-from outfit_selector import select_outfit
+from .data_handler import load_wardrobe_from_db, delete_item_from_db, add_item_to_db, ClothingItem
+from .outfit_selector import select_outfit
 # all of these classes are then referenced in the main.py where they are connected to the button inputs which run this program
 class AddItem(QDialog):
     '''Works to create the interface for user intputs from the add items button.'''

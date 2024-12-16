@@ -1,4 +1,4 @@
-from data_handler import load_wardrobe_from_db, update_wear_count
+from .data_handler import load_wardrobe_from_db, update_wear_count
 from random import sample
 from PyQt5.QtWidgets import QMessageBox
 
