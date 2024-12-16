@@ -17,7 +17,7 @@ This respository contains 4 main files and a sample database with some clothing 
 
 There are two additional folders within this repository.  
 * ```src``` which contains the files which build the program. The user will only need to run the main.py file hence it being stored in the main directory.
-* ```images```` contains the .png images which the functions.py file uses to include images on the interface depending on the weather input selected by the user.
+* ```images``` contains the .png images which the functions.py file uses to include images on the interface depending on the weather input selected by the user.
 
 ## Files included
 
