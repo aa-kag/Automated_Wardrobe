@@ -21,7 +21,7 @@ There are two additional folders within this repository.
 
 ## Files included
 
-### 1. src/data_handler.py
+### 1. ```src/data_handler.py```
 Purpose: Manages all interactions and changes with the database (my_wardrobe.db).
 
 Functions:
@@ -38,7 +38,7 @@ Functions:
 
 ```ClothingItem```: Class which initializes all the database columns as objects which are referenced throughout.
 
-### 2. src/functions.py
+### 2. ```src/functions.py```
 Purpose: Houses all of the classes which contain the features of every widget and button in the interface. This file sets up the design for each window that opens when a button is pushed on the main interface. Each class is related to one of the main buttons of the interface.
 
 Classes:
@@ -54,7 +54,7 @@ Classes:
 
 
 
-### 3. src/outfit_selector.py
+### 3. ```src/outfit_selector.py```
 Purpose: Handles outfit suggestions and wear tracking.
 
 Functions:
@@ -67,7 +67,7 @@ Functions:
 
 ```no_style()```: Triggers a pop-up encouraging the user to buy more diverse styles and colors when the ```select_outfit``` function's fashion filtering is unable to find a suitable 'fashionable' outfit.
 
-### 4. main.py
+### 4. ```main.py```
 Purpose: Provides the main menu interface by calling from the variety of different classes from the  ```functions.py``` which execute the selected button's task.
 
 ```Window(MainWindow)```: This class sets the opening interface as the MainWindow and then has the buttons for add and remove items, view wardrobe, get suggestion, do laundry, and exitting the application. The buttons are linked to functions within the Window class which call corresponding classes from the functions.py file and then execute the class using the .exec() method.
